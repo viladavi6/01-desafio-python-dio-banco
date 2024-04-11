@@ -36,7 +36,7 @@ while True:
         
         if valor > 0:
             total_saldo += valor
-            extrato += f'Depósito realizado com sucesso: {valor:.2f}\n'
+            extrato += f'\nDepósito realizado com sucesso: {valor:.2f}\n'
             print(f'\n{extrato}... Retornando ao menu principal \n')
             time.sleep(5)
         else:
@@ -56,7 +56,7 @@ while True:
         if total_saldo >= saque and saque <= limite_saque_valor and limite_saque_dia > 0:
             total_saldo -= saque
             limite_saque_dia -= 1
-            extrato += f'''
+            extrato += f'''\n
                 ===================================================
                   
                 Saque realizado com sucesso 
@@ -65,13 +65,13 @@ while True:
                 Quantidade de saque restante: {limite_saque_dia}
                   
                 ===================================================
-                  
+                \n  
                 '''
             print(f'\n{extrato}\n Retornando ao menu...\n')
             time.sleep(5)
                 
         elif total_saldo < saque and limite_saque_dia > 0:
-            extrato += f'''
+            print(f'''
                 ===================================================
                   
                 Você não pode sacar porque não tem saldo suficiente 
@@ -80,8 +80,7 @@ while True:
                   
                 ===================================================
                   
-                '''
-            print(extrato)
+                ''')
             print('\nRetornando ao menu...\n')
             time.sleep(5)
         elif limite_saque_valor < saque and limite_saque_dia > 0:
@@ -118,6 +117,7 @@ while True:
             time.sleep(5)
         else:
             print(f'\nVocê tem R${total_saldo:,.2f} disponível.')
+            print(f'\nAqui estão suas últimas movimentações: \n{extrato}\n')
             print('\nRetornando ao menu...\n')
             time.sleep(5)
          
