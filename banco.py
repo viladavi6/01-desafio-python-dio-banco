@@ -34,7 +34,7 @@ while True:
             print(f'\n{extrato}... Retornando ao menu principal \n')
             time.sleep(5)
         else:
-            print('Operação falhou, retornando ao menu. \n')
+            print('\nOperação falhou, retornando ao menu. \n')
             time.sleep(5)
     
     elif opcao == '2':
@@ -58,7 +58,7 @@ while True:
             print(f'\n{extrato}\n Retornando ao menu...\n')
             time.sleep(5)
                 
-        elif total_saldo < saque and limite_saque_valor >= saque and limite_saque_dia > 0:
+        elif total_saldo < saque and limite_saque_dia > 0:
             extrato += f'''
                 ===================================================
                   
@@ -69,6 +69,7 @@ while True:
                 ===================================================
                   
                 '''
+            print(extrato)
             print('\nRetornando ao menu...\n')
             time.sleep(5)
         elif limite_saque_valor < saque and limite_saque_dia > 0:
