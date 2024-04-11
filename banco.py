@@ -26,7 +26,13 @@ while True:
       
     if opcao == '1':   
         
-        valor = float(input('Digite o valor que você deseja depositar: '))
+        while True:
+            try:
+                valor = int(input('Digite o valor que você deseja depositar: '))
+                break
+            except ValueError:
+                print('\nValor incorreto.\n')
+            
         
         if valor > 0:
             total_saldo += valor
@@ -38,8 +44,14 @@ while True:
             time.sleep(5)
     
     elif opcao == '2':
-           
-        saque = float(input('Digite o valor que você deseja sacar: '))
+        
+        while True:
+            try:   
+                saque = float(input('Digite o valor que você deseja sacar: '))
+                break
+            except ValueError:
+                print('\nDigite um valor válido que deseja sacar.\n')
+            
         
         if total_saldo >= saque and saque <= limite_saque_valor and limite_saque_dia > 0:
             total_saldo -= saque
@@ -95,8 +107,9 @@ while True:
                   ''')
             print('\nRetornando ao menu...\n')
             time.sleep(5)
-    
-    
+        elif saque == ValueError:
+            print('\n Valor incorreto, voltando ao menu.\n')    
+            time.sleep(10)
     if opcao == '3':
         
         if extrato == "":
@@ -107,10 +120,13 @@ while True:
             print(f'\nVocê tem R${total_saldo:,.2f} disponível.')
             print('\nRetornando ao menu...\n')
             time.sleep(5)
-              
+         
               
     if opcao == '0':
         break      
+    
+    
+        
         
             
 
