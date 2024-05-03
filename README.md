@@ -17,7 +17,7 @@ basicamente no projeto tem dois tipos de banco, um aplicando funções de forma 
 
 #### 🤔 Quais as Diferenças?
 
-O primeiro é simples e não precisa utilizar seus dados para fazer as operações, apesar de funciona, já o orientado a objetos pede o seu cpf para todas as operações de forma que é possível ter outros, usuários, futuramente, pretendo aplicar talvez um SQL e até possivelmente uma API.
+O primeiro é simples e não precisa utilizar seus dados para fazer as operações, apesar de funcionar, já o orientado a objetos pede o seu cpf para todas as operações de forma que é possível ter outros, usuários, futuramente, pretendo aplicar talvez um SQL e até possivelmente uma API.
 
 ## 🔧 Ferramentas Utilizadas
 
